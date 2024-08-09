@@ -2,11 +2,17 @@ import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import eslintConfigAirbnb from 'eslint-config-airbnb'
+import eslintConfigAirbnbHooks from 'eslint-config-airbnb/hooks'
+import eslintConfigAirbnbTypescript from 'eslint-config-airbnb-typescript'
 
 export default tseslint.config({
   extends: [
     js.configs.recommended,
     ...tseslint.configs.recommended,
+    // eslintConfigAirbnb,
+    // eslintConfigAirbnbHooks,
+    // eslintConfigAirbnbTypescript,
     eslintPluginPrettierRecommended, // prettier 설정을 eslint 규칙으로 설정 + prettier와 충돌하는 rules를 꺼주는 역할, https://github.com/prettier/eslint-plugin-prettier
   ],
   // plugins: [],
@@ -15,20 +21,23 @@ export default tseslint.config({
   languageOptions: {
     ecmaVersion: 2020,
     globals: globals.browser,
+    parserOptions: {
+      project: './tsconfig.json',
+    },
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    'sort-imports': [
-      'error',
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false,
-      },
-    ],
+    // 'sort-imports': [
+    //   'error',
+    //   {
+    //     ignoreCase: false,
+    //     ignoreDeclarationSort: false,
+    //     ignoreMemberSort: false,
+    //     memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+    //     allowSeparatedGroups: false,
+    //   },
+    // ],
   },
 })
