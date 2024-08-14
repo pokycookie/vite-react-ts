@@ -15,7 +15,7 @@
 - [ ] axios
 - [ ] tanstack
 - [ ] .env
-- [ ] icon
+- [x] icon
 - [ ] zustand
 - [ ] zod
 - [ ] error page
