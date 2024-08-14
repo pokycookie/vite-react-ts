@@ -3,6 +3,8 @@
 - [x] eslint
 - [ ] auth
 - [ ] theme
+- [x] route
+- [ ] page loading
 - [ ] config
   - [ ] paths
   - [ ] routes
@@ -16,6 +18,8 @@
 - [ ] icon
 - [ ] zustand
 - [ ] zod
+- [ ] error page
+- [ ] scrollbar
 
 ## Library
 
@@ -34,3 +38,15 @@
 - eslint
 - prettier
 - zod
+
+## Setting
+
+### VSCode settings.json
+
+```json
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": "always"
+}
+```

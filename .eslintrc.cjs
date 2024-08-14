@@ -18,6 +18,7 @@ module.exports = {
   },
   rules: {
     // general
+    radix: 'off',
     'no-alert': 'warn',
     'no-console': 'off',
     'no-unused-vars': 'off',
