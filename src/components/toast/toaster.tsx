@@ -22,6 +22,7 @@ export function Toaster() {
           cancelButton: classes.cancelButton,
           closeButton: classes.closeButton,
 
+          default: classes.default,
           info: classes.info,
           error: classes.error,
           success: classes.success,

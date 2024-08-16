@@ -10,6 +10,7 @@ export const classes = {
   closeButton: 'toaster__close',
   loading: 'toaster__loading',
 
+  default: 'toaster__default',
   success: 'toaster__success',
   info: 'toaster__info',
   warning: 'toaster__warning',

@@ -2,8 +2,7 @@ import { useMemo } from 'react'
 import { useThemeStore } from '@/stores'
 import { Outlet } from 'react-router-dom'
 import { Toaster } from '@/components/toast'
-import { darkTheme } from '@/themes/theme/dark-theme'
-import { lightTheme } from '@/themes/theme/light-theme'
+import { darkTheme, lightTheme } from '@/themes/theme'
 
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 

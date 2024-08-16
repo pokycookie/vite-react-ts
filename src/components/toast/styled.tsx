@@ -8,8 +8,8 @@ export const StyledToaster = styled(Toaster)(({ theme }) => {
     toastDefault: {
       padding: theme.spacing(1, 1, 1, 1.5),
       boxShadow: theme.shadows[8],
-      color: theme.palette.background.paper,
-      backgroundColor: theme.palette.text.primary,
+      color: theme.palette.text.primary,
+      backgroundColor: theme.palette.background.paper,
     },
     toastColor: {
       padding: theme.spacing(0.5, 1, 0.5, 0.5),
@@ -72,6 +72,10 @@ export const StyledToaster = styled(Toaster)(({ theme }) => {
       borderRadius: 'inherit',
       justifyContent: 'center',
       alignSelf: 'flex-start',
+    },
+
+    [`& .${classes.default}`]: {
+      ...baseStyles.toastDefault,
     },
 
     [`& .${classes.success}`]: {
