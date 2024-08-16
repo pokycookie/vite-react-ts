@@ -1,4 +1,4 @@
-import useParamId from '@/hooks/useParamId'
+import useParamId from '@/hooks/use-param-id'
 
 export default function Item() {
   const id = useParamId()
