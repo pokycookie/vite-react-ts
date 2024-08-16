@@ -3,7 +3,7 @@
 - [x] eslint
 - [ ] auth
 - [x] mui
-- [ ] theme
+- [x] theme
 - [x] route
 - [ ] page loading
 - [ ] config
@@ -12,12 +12,12 @@
 - [ ] i18n
 - [ ] modal
 - [ ] notification
-- [ ] absolute path
+- [x] absolute path
 - [ ] axios
 - [ ] tanstack
 - [ ] .env
 - [x] icon
-- [ ] zustand
+- [x] zustand
 - [ ] zod
 - [ ] error page
 - [ ] scrollbar
