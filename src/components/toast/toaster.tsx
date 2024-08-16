@@ -6,8 +6,8 @@ export function Toaster() {
   return (
     <StyledToaster
       closeButton
-      visibleToasts={4}
-      duration={Infinity}
+      visibleToasts={3}
+      duration={1500}
       toastOptions={{
         unstyled: true,
         classNames: {
