@@ -11,9 +11,9 @@
   - [x] api
 - [ ] i18n
 - [ ] modal
-- [ ] notification
+- [x] notification -> sonner
 - [x] absolute path
-- [ ] axios
+- [x] axios
 - [ ] tanstack
 - [ ] .env
 - [x] icon
