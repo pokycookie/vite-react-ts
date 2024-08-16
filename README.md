@@ -6,9 +6,9 @@
 - [x] theme
 - [x] route
 - [ ] page loading
-- [ ] config
-  - [ ] paths
-  - [ ] routes
+- [x] config
+  - [x] paths
+  - [x] api
 - [ ] i18n
 - [ ] modal
 - [ ] notification
