@@ -1,0 +1,40 @@
+import { Iconify } from '@/components/iconify'
+import { classes } from '@/components/toast/classes'
+import { StyledToaster } from '@/components/toast/styled'
+
+export function Toaster() {
+  return (
+    <StyledToaster
+      closeButton
+      visibleToasts={4}
+      duration={Infinity}
+      toastOptions={{
+        unstyled: true,
+        classNames: {
+          toast: classes.toast,
+          icon: classes.icon,
+
+          content: classes.content,
+          title: classes.title,
+          description: classes.description,
+
+          actionButton: classes.actionButton,
+          cancelButton: classes.cancelButton,
+          closeButton: classes.closeButton,
+
+          info: classes.info,
+          error: classes.error,
+          success: classes.success,
+          warning: classes.warning,
+        },
+      }}
+      icons={{
+        loading: <span />,
+        info: <Iconify width={25} icon="solar:info-circle-bold" />,
+        success: <Iconify width={25} icon="solar:check-circle-bold" />,
+        warning: <Iconify width={25} icon="solar:danger-triangle-bold" />,
+        error: <Iconify width={25} icon="solar:danger-bold" />,
+      }}
+    />
+  )
+}
