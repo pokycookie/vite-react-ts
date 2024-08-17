@@ -1,6 +1,7 @@
 const PATH = {
   root: '/',
   component: '/components',
+  mirage: '/mirage',
 }
 
 const paths = {
@@ -9,6 +10,9 @@ const paths = {
     root: PATH.component,
     toast: `${PATH.component}/toast`,
     scrollbar: `${PATH.component}/scrollbar`,
+  },
+  mirage: {
+    root: PATH.mirage,
   },
 }
 

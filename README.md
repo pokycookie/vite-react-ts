@@ -20,7 +20,7 @@
 - [x] zustand
 - [ ] zod
 - [ ] error page
-- [ ] scrollbar -> https://www.npmjs.com/package/simplebar-react
+- [x] scrollbar -> https://www.npmjs.com/package/simplebar-react
 - [ ] font -> https://fontsource.org/
 - [ ] https://miragejs.com/
 

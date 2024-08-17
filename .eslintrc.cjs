@@ -21,6 +21,7 @@ module.exports = {
     radix: 'off',
     'no-alert': 'warn',
     'no-console': 'off',
+    'no-plusplus': 'off',
     'no-unused-vars': 'off',
     'no-nested-ternary': 'off',
     'no-param-reassign': 'off',
@@ -29,6 +30,12 @@ module.exports = {
     'no-promise-executor-return': 'off',
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/server.ts'],
+      },
+    ],
     'prefer-destructuring': ['warn', { object: true, array: false }],
 
     // typescript

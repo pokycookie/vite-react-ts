@@ -13,6 +13,9 @@ export default function MainView() {
         <ListItem>
           <Link to={paths.components.scrollbar}>scrollbar</Link>
         </ListItem>
+        <ListItem>
+          <Link to={paths.mirage.root}>mirage</Link>
+        </ListItem>
       </List>
     </Container>
   )
