@@ -1,8 +1,8 @@
-import axios from 'axios'
+import _axios from 'axios'
 import { BASE_URL } from '@/configs/api'
 
-const api = axios.create({
+const axios = _axios.create({
   baseURL: BASE_URL,
 })
 
-export default api
+export default axios

@@ -1,18 +1,13 @@
 import type { RouteObject } from 'react-router-dom'
 
-import App from '@/pages/app'
-import Item from '@/pages/Item'
 import paths from '@/configs/paths'
+import MainView from '@/pages/main-view'
 import componentRoute from '@/routes/component-route'
 
 const mainRoute: RouteObject[] = [
   {
     path: '',
-    element: <App />,
-  },
-  {
-    path: '/item/:id',
-    element: <Item />,
+    element: <MainView />,
   },
   {
     path: paths.components.root,

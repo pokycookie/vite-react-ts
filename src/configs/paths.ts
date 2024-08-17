@@ -8,6 +8,7 @@ const paths = {
   components: {
     root: PATH.component,
     toast: `${PATH.component}/toast`,
+    scrollbar: `${PATH.component}/scrollbar`,
   },
 }
 
