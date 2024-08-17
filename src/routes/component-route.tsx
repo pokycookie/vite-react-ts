@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom'
 
-import { paths } from '@/configs/paths'
+import paths from '@/configs/paths'
 import ToastView from '@/pages/components/toast-view'
 
 const componentRoute: RouteObject[] = [

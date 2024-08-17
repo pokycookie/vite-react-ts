@@ -20,8 +20,8 @@
 - [x] zustand
 - [ ] zod
 - [ ] error page
-- [ ] scrollbar
-- [ ] font
+- [ ] scrollbar -> https://www.npmjs.com/package/simplebar-react
+- [ ] font -> https://fontsource.org/
 - [ ] https://miragejs.com/
 
 ## Library

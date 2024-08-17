@@ -1,4 +1,4 @@
-const COLOR = {
+const color = {
   primary: {
     lighter: '#C8FAD6',
     light: '#5BE49B',
@@ -65,4 +65,4 @@ const COLOR = {
   },
 }
 
-export default COLOR
+export default color

@@ -3,10 +3,12 @@ const PATH = {
   component: '/components',
 }
 
-export const paths = {
+const paths = {
   root: PATH.root,
   components: {
     root: PATH.component,
     toast: `${PATH.component}/toast`,
   },
 }
+
+export default paths

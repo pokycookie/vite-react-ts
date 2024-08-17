@@ -6,10 +6,6 @@ declare module '@mui/material/Button' {
   }
 }
 
-const COLORS = ['primary', 'secondary', 'info', 'success', 'warning', 'error'] as const
-
-type ColorType = (typeof COLORS)[number]
-
 const MuiButtonBase: Components<Theme>['MuiButtonBase'] = {
   styleOverrides: { root: ({ theme }) => ({ fontFamily: theme.typography.fontFamily }) },
 }
