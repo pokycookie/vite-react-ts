@@ -8,7 +8,7 @@ export default function server() {
     },
 
     routes() {
-      this.namespace = 'mock'
+      this.namespace = 'api'
 
       this.get(api.test, (schema) => schema.all('reminder'), { timing: 500 })
 

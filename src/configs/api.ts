@@ -1,4 +1,4 @@
-export const BASE_URL = import.meta.env.PROD ? '/api' : '/mock'
+export const BASE_URL = '/api'
 
 const api = {
   test: '/test',

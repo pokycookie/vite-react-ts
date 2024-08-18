@@ -15,14 +15,14 @@
 - [x] absolute path
 - [x] axios
 - [ ] tanstack
-- [ ] .env
+- [x] .env
 - [x] icon
 - [x] zustand
 - [ ] zod
 - [ ] error page
 - [x] scrollbar -> https://www.npmjs.com/package/simplebar-react
 - [ ] font -> https://fontsource.org/
-- [ ] https://miragejs.com/
+- [x] mock api -> https://miragejs.com/
 
 ## Library
 
