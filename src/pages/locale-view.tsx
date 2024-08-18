@@ -4,6 +4,7 @@ import { Stack, Button, Container, Typography } from '@mui/material'
 
 export default function LocalView() {
   const { t, changeLang } = useTranslate()
+  const { t: sub } = useTranslate('sub')
 
   return (
     <Container>
@@ -12,6 +13,7 @@ export default function LocalView() {
         <Button onClick={() => changeLang('en')}>EN</Button>
       </Stack>
       <Typography>{t('test')}</Typography>
+      <Typography>{sub('sub')}</Typography>
     </Container>
   )
 }
