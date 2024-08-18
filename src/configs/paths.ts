@@ -2,6 +2,7 @@ const PATH = {
   root: '/',
   component: '/components',
   mirage: '/mirage',
+  locale: '/locale',
 }
 
 const paths = {
@@ -13,6 +14,9 @@ const paths = {
   },
   mirage: {
     root: PATH.mirage,
+  },
+  locale: {
+    root: PATH.locale,
   },
 }
 

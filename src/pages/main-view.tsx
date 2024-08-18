@@ -16,6 +16,9 @@ export default function MainView() {
         <ListItem>
           <Link to={paths.mirage.root}>mirage</Link>
         </ListItem>
+        <ListItem>
+          <Link to={paths.locale.root}>locale</Link>
+        </ListItem>
       </List>
     </Container>
   )

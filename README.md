@@ -9,7 +9,7 @@
 - [x] config
   - [x] paths
   - [x] api
-- [ ] i18n
+- [x] i18n
 - [ ] modal
 - [x] notification -> sonner
 - [x] absolute path
