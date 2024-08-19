@@ -1,31 +1,54 @@
 import api from '@/configs/api'
-import { useState } from 'react'
 import axios from '@/configs/axios'
+import { ITodoRequest, ITodoResponse } from '@/types/todo'
 
-import { Stack, Button, Container } from '@mui/material'
+import { Stack, Button, Container, CircularProgress, ListItem, Typography } from '@mui/material'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+
+const queryFn = async () => {
+  const data = await axios.get<{ todos: ITodoResponse[] }>(api.todo)
+  return data.data
+}
+
+const mutationFn = async (req: ITodoRequest) => {
+  const data = await axios.post(api.todo, req)
+  return data.data
+}
 
 export default function MockApiView() {
-  const [test, setTest] = useState()
+  const queryClient = useQueryClient()
 
-  const get = async () => {
-    const { data } = await axios.get(api.test)
-    setTest(data)
-    console.log(data)
+  const { data, isPending, isError } = useQuery({ queryKey: ['todo'], queryFn })
+
+  const { mutate } = useMutation({
+    mutationFn,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['todo'] })
+    },
+  })
+
+  if (isPending) {
+    return <CircularProgress />
   }
 
-  const post = async () => {
-    const { data } = await axios.post(api.test, {
-      text: 'Test Post',
-    })
-    console.log(data)
+  if (isError) {
+    return <Container>Error</Container>
   }
 
   return (
     <Container>
       <Stack spacing={1}>
-        <Button onClick={get}>GET</Button>
-        <Button onClick={post}>POST</Button>
+        {data.todos.map((todo) => (
+          <Stack key={todo.id} direction="row" spacing={1}>
+            <Typography>{todo.title}</Typography>
+            <Typography>{todo.content}</Typography>
+            <Typography>{todo.status}</Typography>
+          </Stack>
+        ))}
       </Stack>
+      <Button onClick={() => mutate({ title: 'New', content: new Date().toDateString() })}>
+        POST
+      </Button>
     </Container>
   )
 }

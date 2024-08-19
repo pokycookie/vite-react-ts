@@ -1,7 +1,7 @@
 export const BASE_URL = '/api'
 
 const api = {
-  test: '/test',
+  todo: '/todo',
 }
 
 export default api

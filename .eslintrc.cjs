@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  plugins: ['perfectionist', 'unused-imports', '@typescript-eslint', 'prettier'],
+  plugins: ['perfectionist', 'unused-imports', '@tanstack/query', '@typescript-eslint', 'prettier'],
   extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'prettier'],
   parserOptions: {
     sourceType: 'module',
@@ -59,6 +59,12 @@ module.exports = {
     // jsx-a11y
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
+
+    // tanstack
+    // '@tanstack/query/exhaustive-deps': 'error',
+    // '@tanstack/query/no-deprecated-options': 'error',
+    // '@tanstack/query/prefer-query-object-syntax': 'error',
+    // '@tanstack/query/stable-query-client': 'error',
 
     // unused imports
     'unused-imports/no-unused-imports': 'off',
