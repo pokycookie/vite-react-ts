@@ -1,8 +1,9 @@
+import type { ITodoResponse } from '@/types/todo'
+
 import api from '@/configs/api'
-import { ITodoResponse } from '@/types/todo'
 import { Model, createServer } from 'miragejs'
 
-export default function server() {
+export default function initServer() {
   createServer({
     models: {
       todo: Model.extend<Partial<ITodoResponse>>({}),

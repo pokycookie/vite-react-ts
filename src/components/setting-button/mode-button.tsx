@@ -15,7 +15,7 @@ export function ModeButton() {
   }, [mode])
 
   return (
-    <IconButton onClick={toggle}>
+    <IconButton onClick={toggle} sx={{ color: 'white' }}>
       <Iconify icon={icon} />
     </IconButton>
   )

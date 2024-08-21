@@ -5,8 +5,13 @@ import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { changeLangMessages } from '@/locales/config'
 
+import { langs } from './langs'
+
 export function useTranslate(ns?: string) {
   const { t, i18n } = useTranslation(ns)
+
+  const fallback = langs[0]
+  const currentLang = langs.find((lang) => lang.value === i18n.resolvedLanguage) ?? fallback
 
   const changeLang = useCallback(
     async (lang: LocaleLang) => {
@@ -25,5 +30,5 @@ export function useTranslate(ns?: string) {
     [i18n]
   )
 
-  return { t, i18n, changeLang }
+  return { t, i18n, changeLang, currentLang }
 }

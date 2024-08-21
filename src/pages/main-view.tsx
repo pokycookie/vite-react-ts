@@ -1,30 +1,37 @@
 import paths from '@/configs/paths'
-import { Link } from 'react-router-dom'
-import { Icon } from '@iconify/react/dist/iconify.js'
-import { ModeButton } from '@/components/theme-button'
+import { Link } from '@/components/link'
+import { useTranslate } from '@/locales'
 
-import { List, Card, ListItem, Container, Typography } from '@mui/material'
+import { List, Button, ListItem, Container } from '@mui/material'
 
 export default function MainView() {
+  const { t } = useTranslate('paths')
+
   return (
     <Container>
-      <Typography variant="h2">안녕하세요!</Typography>
-      <Icon icon="solar:airbuds-case-open-bold" width={20} height={20} />
-      <ModeButton />
-      <Card>123</Card>
-
       <List>
-        <ListItem>
-          <Link to={paths.components.toast}>toast</Link>
+        <ListItem sx={{ p: 0 }}>
+          <Link sx={{ color: (theme) => theme.palette.text.primary }} to={paths.components.toast}>
+            <Button variant="soft">{t('components.toast')}</Button>
+          </Link>
         </ListItem>
-        <ListItem>
-          <Link to={paths.components.scrollbar}>scrollbar</Link>
+        <ListItem sx={{ p: 0 }}>
+          <Link
+            sx={{ color: (theme) => theme.palette.text.primary }}
+            to={paths.components.scrollbar}
+          >
+            <Button variant="soft">{t('components.scrollbar')}</Button>
+          </Link>
         </ListItem>
-        <ListItem>
-          <Link to={paths.mirage.root}>mirage</Link>
+        <ListItem sx={{ p: 0 }}>
+          <Link sx={{ color: (theme) => theme.palette.text.primary }} to={paths.mirage.root}>
+            <Button variant="soft">{t('mirage')}</Button>
+          </Link>
         </ListItem>
-        <ListItem>
-          <Link to={paths.locale.root}>locale</Link>
+        <ListItem sx={{ p: 0 }}>
+          <Link sx={{ color: (theme) => theme.palette.text.primary }} to={paths.locale.root}>
+            <Button variant="soft">{t('locale')}</Button>
+          </Link>
         </ListItem>
       </List>
     </Container>

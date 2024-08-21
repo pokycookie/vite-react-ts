@@ -1,9 +1,10 @@
+import type { ITodoRequest, ITodoResponse } from '@/types/todo'
+
 import api from '@/configs/api'
 import axios from '@/configs/axios'
-import { ITodoRequest, ITodoResponse } from '@/types/todo'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 
-import { Stack, Button, Container, CircularProgress, ListItem, Typography } from '@mui/material'
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { Stack, Button, ListItem, Container, Typography, CircularProgress } from '@mui/material'
 
 const queryFn = async () => {
   const data = await axios.get<{ todos: ITodoResponse[] }>(api.todo)
